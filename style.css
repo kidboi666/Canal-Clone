@@ -35,9 +35,6 @@ header p {
   transform: rotate(90deg);
   font-size: 20px;
 }
-main .main__section {
-
-}
 main .headline {
   padding: 230px 240px 120px 60px;
   font-size: 60px;
@@ -69,4 +66,28 @@ main .text__box {
   font-family: 'Roboto Slab';
   margin-top: 35px;
   line-height: 20px;
+}
+
+main .second__article {
+  position: relative;
+  padding: 75px 0 100px;
+  background-image: 
+    linear-gradient(90deg,#000 50%,transparent 0),
+    linear-gradient(90deg,#000 50%,transparent 0),
+    linear-gradient(90deg,#000 50%,transparent 0),
+    linear-gradient(90deg,#000 50%,transparent 0);
+  background-position: 0 0,0 100%,left 14px,0 calc(100% - 14px);
+  background-repeat: repeat-x,repeat-x,repeat-x,repeat-x;
+  background-size: 24px 1px,24px 1px,24px 1px,24px 1px;
+  animation: .8s infinite normal c;
+  animation-timing-function: linear;
+}
+@keyframes c {
+  0% {
+      background-position-x: 0,0
+  }
+
+  to {
+      background-position-x: 24px,-24px
+  }
 }
