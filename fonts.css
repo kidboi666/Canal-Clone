@@ -24,3 +24,6 @@ body {
 main .text__box {
     font-family: 'apercu mono';
 }
+main .date__box .grid__box {
+    font-family: 'apercu mono';
+}
