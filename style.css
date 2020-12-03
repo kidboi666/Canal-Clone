@@ -1,7 +1,6 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Roboto Slab', serif;
 }
 
 header {
@@ -9,6 +8,7 @@ header {
   grid-template-columns: repeat(3, 60px);
   position: fixed;
   right: 0;
+  z-index: 10;
 }
 header .food {
   width: 60px;
@@ -56,19 +56,44 @@ main .grid__3columns {
   padding: 0 240px 0 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   column-gap: 60px;
+  height: 100%;
 }
 main .grid__3columns img {
   width: 100%;
 }
 main .text__box {
-  font-family: 'Roboto Slab';
   margin-top: 35px;
   line-height: 20px;
 }
-
-main .second__article {
+main .market__article {
+  margin-top: 200px;
+  padding: 0 240px 0 60px;
+  text-align: center;
+}
+main .market__box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+main .market {
+  font-size: 100px;
+}
+main .chinese {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 600px;
+  text-shadow: .1px .1px 1px black;
+}
+main .date__article {
+  margin-top: 50px;
+  padding: 0 240px 0 60px;
+}
+main .date__box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   position: relative;
   padding: 75px 0 100px;
   background-image: 
@@ -86,8 +111,71 @@ main .second__article {
   0% {
       background-position-x: 0,0
   }
-
   to {
       background-position-x: 24px,-24px
   }
+}
+main .date__box .grid__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main .date__box span {
+  margin-bottom: 20px;
+}
+main .date__article .see__all {
+  width: 180px;
+  padding: 20px 0;
+  position: absolute;
+  border: 1px solid black;
+  background: #fff;
+  text-align: center;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .3s;
+}
+main .date__article .see__all:hover {
+  background: #000;
+  color: #fff;
+}
+main .newyork {
+  position: relative;
+  margin-top: 150px;
+  padding: 0 240px 0 60px;
+}
+main .newyork__box {
+  display: grid;
+  font-size: 60px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 60px;
+}
+main .newyork .grid__box {
+  padding: 1px;
+  background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0);
+  background-position: 0 0,0 100%,0 0,100% 0;
+  background-repeat: repeat-x,repeat-x,repeat-y,repeat-y;
+  background-size: 30px 1px,30px 1px,1px 30px,1px 30px;
+  animation: .4s infinite normal a;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+main .newyork .grid__box:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 30px;
+}
+main .newyork .grid__box:nth-child(2) {
+  width: 100%;
+  height: 100%;
+}
+main .newyork .grid__box:nth-child(2) .img {
+  background-image: url(./img/mapimg.jpg);
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
 }
