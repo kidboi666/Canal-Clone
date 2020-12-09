@@ -2,6 +2,22 @@ body {
   width: 100%;
   height: 100%;
 }
+.click__button {
+  width: 180px;
+  padding: 20px 0;
+  position: relative;
+  border: 1px solid black;
+  background: #fff;
+  text-align: center;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .3s;
+}
+.click__button:hover {
+  background: #000;
+  color: #fff;
+}
 
 header {
   display: grid;
@@ -125,21 +141,8 @@ main .date__box .grid__box {
 main .date__box span {
   margin-bottom: 20px;
 }
-main .date__article .see__all {
-  width: 180px;
-  padding: 20px 0;
+main .date__box .click__button {
   position: absolute;
-  border: 1px solid black;
-  background: #fff;
-  text-align: center;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: .3s;
-}
-main .date__article .see__all:hover {
-  background: #000;
-  color: #fff;
 }
 main .newyork {
   position: relative;
@@ -178,4 +181,115 @@ main .newyork .grid__box:nth-child(2) .img {
   background-position: 50%;
   width: 100%;
   height: 100%;
+}
+
+footer .footer__section {
+  padding: 0 240px 0 60px;
+}
+footer .footer__row {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 60px;
+}
+footer .footer__row:first-child {
+  grid-template-columns: 1fr;
+}
+footer .interested__box {
+  position: relative;
+  padding: 60px;
+  background-image: 
+  repeating-linear-gradient(-74deg, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 0, transparent 4px), 
+  repeating-linear-gradient(-74deg, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 0, transparent 4px);
+  background-position: 0 0, 0 100%;
+  background-size: 100% 12px, 100% 12px;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+}
+footer .interested__box h3 {
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+footer .footer__row:nth-child(2) div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 14px;
+}
+footer .footer__row:nth-child(3) {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  padding: 60px;
+  font-size: 24px;
+}
+footer .input__email {
+  width: 100%;
+  border: 1px solid black;
+  padding: 20px 20px;
+}
+footer .input__box {
+  position: relative;
+}
+footer .input__submit {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -.5px;
+  width: 2px;
+  height: 2px;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+footer .input__submit::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  width: 2px;
+  height: 2px;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+footer .input__submit::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  width: 2px;
+  height: 2px;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+footer .input__submit .triangle {
+  width: 0;
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  border-top: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid black;
+}
+footer .footer__row:nth-child(4) {
+  grid-template-columns: 2fr 1fr;
+  font-size: 14px;
+  margin: 50px;
+}
+footer .copyright__box {
+  display: flex;
+  justify-content: space-between;
+}
+footer .copyright__box p:not(:first-child) {
+  border-bottom: 1px solid black;
+}
+footer .site__by {
+  display: flex;
+  justify-content: flex-end;
 }

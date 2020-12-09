@@ -1,29 +1,44 @@
 @font-face {
-    font-family: 'ogg';
-    src: url('./fonts/Ogg-Roman.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'ogg';
+  src: url('./fonts/Ogg-Roman.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'apercu';
-    src: url('./fonts/Apercu_Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'apercu';
+  src: url('./fonts/Apercu_Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'apercu mono';
-    src: url('./fonts/apercu-mono.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'apercu mono';
+  src: url('./fonts/apercu-mono.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
 }
 body {
-    font-family: 'ogg'
+  font-family: 'ogg';
+}
+header {
+  font-family: 'apercu mono';
+}
+.click__button {
+  font-family: 'apercu mono';
 }
 main .text__box {
-    font-family: 'apercu mono';
+  font-family: 'apercu mono';
 }
 main .date__box .grid__box {
-    font-family: 'apercu mono';
+  font-family: 'apercu mono';
+}
+footer .footer__row:nth-child(2) {
+  font-family: 'apercu mono';
+}
+footer .footer__row:nth-child(3) {
+  font-family: 'apercu mono';
+}
+footer .footer__row:nth-child(4) {
+  font-family: 'apercu';
 }
